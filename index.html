@@ -1,0 +1,141 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">2
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body >
+    <div id="grid-container">
+        <video id="rainfall">
+            <source src="./a-shower-rainfall.mp4" type="video/mp4">
+          </video>
+        <video id="Sun">
+            <source src="./drought-land-during-sunset-time-global-warming.mp4" type="video/mp4">
+          </video>
+
+    <section id="gridarea1" >
+        <div class="flip-card">
+            <div class="flip-card-">
+              <div class="flip-card-front">
+                <div class="main-panel">
+                          <div class="city-name" data-name="${city.name},${city.country}">
+                              <div class="input-data" >
+                                 <h1 class="today">今天: Tuesday</h1>
+                                 <span>地點:<input class="city" placeholder="location"></input></span>  
+                              </div>
+                              <div class="row" id="District">
+                                 <span class="col-sm-3"  id="region">地區:</span>
+                                 <span class="col-sm-3"  id="country">國家: </span>
+                                 <span class="col-sm-3" id="date">日期:</span>
+                              </div>
+                              <div class="temperature">
+                                 <div class="row details-of-temperature">
+                                   <h1 class="col-sm-3"  id="Temperature-min">最小氣溫:27</h1>
+                                   <h1 class="col-sm-3" id="Temperature-max">最大氣溫:27</h1>
+                                   <p class=" col-sm-3" id="weather">天氣: Rainy</p>  
+                 
+                                 </div>
+                                 <div class="row" id="Predictation">
+                                   <label Humidity class="col-md text-white">Humidity:<b>0%</b></label>
+                                   <label Wind-Speed class="col-md text-white">Wind Speed: <b>34%</b></label> 
+                                   <label Precipitation class="col-md text-white">precipitation<b>0 km/h</b></label>                        
+                                 </div>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+              <div class="flip-card-back">
+          <div class="gridarea1_2">
+
+                      <div class="note" >
+                        <div class="a123">
+                          <div  class="time">
+                            <div class="time">
+                             <p id="daytime" onclick="getTime()">775375</p>
+                            </div>
+                          </div>   
+                          <div class="notes">
+                            <input class="title" placeholder="input"></input>
+                            <textarea 
+                             rows="4" 
+                             cols="50" 
+                             name="comment" 
+                             form="usrform" 
+                             placeholder="Enter text here..."
+                             class="Textvalue">
+                            </textarea>
+                            <button  class="save">save value</button>
+                            <button onclick="clearAll()">Clear</button>
+                             <button onclick="DelValue()">remove value</button>
+                         </div>
+                          </div>
+                          </div>
+                          <div>
+                            <h1>List</h1>
+                          <ul class="note123">
+                              <li>Coffee</li>
+                              <li>Tea</li>
+                              <li>Milk</li>
+                            </ul>  
+                          </div>   
+                      </div> 
+                  </div>
+              </div>
+        </header>
+        
+    </section>
+
+    <section class="predictation" id="gridarea2">
+        <div class="row" id="days">
+            <div class="col-md bg-primary" data-name="${list[0].main.temp_min, list[0].main.temp_max}">
+                <div class="city-name" onclick="display(0)">
+                    <h1 class="weekday_1">Monday</h1>
+                    <span data-operation-min class="city-temp-min-1" >temperature min: 29<sup>°C</sup></span>
+                    <br><span data-operation-max class="city-temp-max-1">temperature max: 29<sup>°C</sup></span>
+                </div>
+            </div>
+            <div class="col-md bg-dark" data-name="${list[1].main.temp_min, list[1].main.temp_max}">
+                <div class="city-name" onclick="display(3)">
+                    <h1 class="weekday_2" >Tuesday</h1>
+                    <span data-operation-min class="city-temp-min-2">temperature min: 27<sup>°C</sup></span>
+                    <br><span data-operation-max class="city-temp-max-2">temperature max: 27<sup>°C</sup></span>
+                </div>
+            </div>
+            <div class="col-md bg-primary" data-name="${list[2].main.temp_min, list[2].main.temp_max}">
+                <div class="city-name" onclick="display(12)">
+                    <h1 class="weekday_3" >Wednesday</h1>
+                    <span data-operation-min class="city-temp-min-3">temperature min: 29<sup>°C</sup></span>
+                    <br><span data-operation-max class="city-temp-max-3">temperature max: 29<sup>°C</sup></span>
+                </div>
+            </div>
+            <div class="col-md bg-dark" data-name="${list[3].main.temp_min, list[3].main.temp_max}">
+                <div class="city-name" onclick="display(20)">
+                    <h1 class="weekday_4" >Thursday</h1>
+                    <span data-operation-min class="city-temp-min-4">temperature min: 29<sup>°C</sup></span>
+                    <br><span data-operation-max class="city-temp-max-4">temperature max: 29<sup>°C</sup></span>
+                </div>
+            </div>
+            <div class="col-md bg-primary" data-name="${list[4].main.temp_min, list[4].main.temp_max}">
+                <div class="city-name" onclick="display(32)">
+                    <h1 class="weekday_5" >Friday</h1>
+                    <span data-operation-min class="city-temp-min-5">temperature min: 29<sup>°C</sup></span>
+                    <br><span data-operation-max class="city-temp-max-5">temperature max: 29<sup>°C</sup></span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+            <div id="gridarea3">
+                <button class="change" onclick="getData()">Change City</button>
+                <button class="change" onclick="resetAll()">reset</button>
+                <button id="a1" onclick="showBtn()">show note</button>
+            </div>
+</div>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
